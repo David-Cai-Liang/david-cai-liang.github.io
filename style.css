@@ -15,3 +15,12 @@
   color: green;
   text-decoration: inherit;
 }
+
+.contact-info {
+  max-width: 600px;
+  margin: 2em auto;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

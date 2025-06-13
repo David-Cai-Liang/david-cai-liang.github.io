@@ -56,82 +56,92 @@
           </li>
         </ol>
 
-    <h2 style='text-align: center'> Useful Scripts & Applications </h2>
-    <ol>
-      <li>Bash Startup</li>
-      <pre>
-        #!/bin/bash
+        <h2 style='text-align: center'> Useful Scripts & Applications </h2>
+        <ol>
+          <li>Bash Startup</li>
+          <pre>
+            #!/bin/bash
 
-        # Adding some variables
-        user=$(whoami)
-        system=$(uname)
-        kernel=$(uname -r)
-        uptime=$(uptime -p)
-        host=$(hostname)
-        IP=$(hostname -I | sed 's/ .*//')
-        memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
-        memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
-        check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
+            # Adding some variables
+            user=$(whoami)
+            system=$(uname)
+            kernel=$(uname -r)
+            uptime=$(uptime -p)
+            host=$(hostname)
+            IP=$(hostname -I | sed 's/ .*//')
+            memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+            memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+            check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
 
-        # Functions list
+            # Functions list
 
-        get_privilege(){
-        if [[ $user = $check ]];
-        then
-                echo "Root Access:| True:|" >> trash.txt
-        else
-                echo "Root Access:| False:|" >> trash.txt
-        fi
-        }
+            get_privilege(){
+            if [[ $user = $check ]];
+            then
+            echo "Root Access:| True:|" >> trash.txt
+            else
+            echo "Root Access:| False:|" >> trash.txt
+            fi
+            }
 
-        get_user(){
-        	echo "User:|" $user"@"$system":|" >> trash.txt
-        }
+            get_user(){
+            echo "User:|" $user"@"$system":|" >> trash.txt
+            }
 
-        get_hostname(){
-        	echo "Host:|" $host":|"  >> trash.txt
-        }
+            get_hostname(){
+            echo "Host:|" $host":|"  >> trash.txt
+            }
 
-        get_shell(){
-        	echo "Shell:|" $SHELL":|"  >> trash.txt
-        }
+            get_shell(){
+            echo "Shell:|" $SHELL":|"  >> trash.txt
+            }
 
-        get_ip(){
-          echo "IP:|" $IP":|" >> trash.txt
-        }
+            get_ip(){
+            echo "IP:|" $IP":|" >> trash.txt
+            }
 
-        get_kernel(){
-        	echo "Kernel:|" $kernel":|"  >> trash.txt
-        }
+            get_kernel(){
+            echo "Kernel:|" $kernel":|"  >> trash.txt
+            }
 
-        get_uptime(){
-        	echo "Uptime:|" $uptime":|"  >> trash.txt
-        }
+            get_uptime(){
+            echo "Uptime:|" $uptime":|"  >> trash.txt
+            }
 
 
-        get_memory(){
-        	echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
-        }
+            get_memory(){
+            echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
+            }
 
-        get_packages(){
-        	echo "Packages:| "$packages":|"  >> trash.txt
-        }
+            get_packages(){
+            echo "Packages:| "$packages":|"  >> trash.txt
+            }
 
-        # Run all the functions in this order
+            # Run all the functions in this order
 
-        get_user
-        get_hostname
-        get_ip
-        get_privilege
-        get_shell
-        get_kernel
-        get_uptime
-        get_memory
+            get_user
+            get_hostname
+            get_ip
+            get_privilege
+            get_shell
+            get_kernel
+            get_uptime
+            get_memory
 
-        # Display it
-        cat trash.txt | column -s":" -t
+            # Display it
+            cat trash.txt | column -s":" -t
 
-        rm trash.txt
-      </pre>
-    </ol>
+            rm trash.txt
+          </pre>
+        </ol>
+
+        <div class="contact-info">
+          <h2 >Contact Information</h2>
+          <p>Feel free to reach out to us via email:</p>
+          <ul>
+            <li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/david-cai-liang-69783926b"> https://www.linkedin.com/in/david-cai-liang-69783926b/</a></li>
+            <li><strong>Email: </strong><a href="javascript:openEmail()">davidcailiang9@gmail.com</a> </li>
+          </ul>
+        </div>
+        <script src="contact.js"></script>
       </body>
