@@ -2,49 +2,136 @@
 <!--<html> to <html lang='en'> -->
 <html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> David Cai Liang Portfolio </title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> David Cai Liang Portfolio </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
+  <body>
 
 
-<div class="header">
-  <h1> <a href=https://sites.google.com/view/davidcailianghighschool/computer-science target="_blank" rel="noopener"> David Cai Liang Portfolio </a></h1>
-</div>
+    <div class="header">
+      <h1> <a href=https://sites.google.com/view/davidcailianghighschool/computer-science target="_blank" rel="noopener"> David Cai Liang Portfolio </a></h1>
+    </div>
 
-<h4> High School </h4>
+    <h2 style='text-align: center'> Projects </h2>
+    <h4> High School </h4>
 
-<ol>
- <li>Circuit Simulator
-   <ul>
-     <li>Built Using Processing & Java</li>
-     <li>Utilizes Custom Data Structures</li>
-     <li>Capable of modeling circuits with both parallel and in-series elements</li>
-     <li>Calculates voltage, current, and power across all resistors and the entire circuit</li>
-     <li>https://github.com/Stuycs-K/final-project-9-cailiangd-mad</li>
-   </ul>
- </li>
- <li>A5/1 Demo
-   <ul>
-     <li>Built using Java & C</li>
-     <li>Implements the A5/1 Algorithm as accurately as possible</li>
-     <li>https://github.com/Stuycs-K/final-project-10-ayushin-arslan-cailiang-david</li>
-</ol>
+    <ol>
+      <li>Circuit Simulator
+        <ul>
+          <li>Built Using Processing & Java</li>
+          <li>Utilizes Custom Data Structures</li>
+          <li>Capable of modeling circuits with both parallel and in-series elements</li>
+          <li>Calculates voltage, current, and power across all resistors and the entire circuit</li>
+          <li>https://github.com/Stuycs-K/final-project-9-cailiangd-mad</li>
+        </ul>
+      </li>
+      <li>A5/1 Demo
+        <ul>
+          <li>Built using Java & C</li>
+          <li>Implements the A5/1 Algorithm as accurately as possible</li>
+          <li>https://github.com/Stuycs-K/final-project-10-ayushin-arslan-cailiang-david</li>
+        </ol>
 
-<h4> College </h4>
+        <h4> College </h4>
 
-<ol>
- <li>Bridge Simulator</li>
-  <ul>
-    <li>Built Using Python</li>
-    <li>Utilizes multiple libraries: json, pandas, matplotlib, datetime, numpy, seaborn, scipy, and os
-    <li>Analysis and visualizes bridge strain, displacement, and vibration data in various manners</li>
-    <li>Utilizes linear regressions and satistical tools to model normal bridge behavior and find abnormalities in behavior.
-  <ul>
-</ol>
+        <ol>
+          <li>Bridge Simulator
+            <ul>
+              <li>Built Using Python</li>
+              <li>Utilizes multiple libraries: json, pandas, matplotlib, datetime, numpy, seaborn, scipy, and os</li>
+              <li>Analysis and visualizes bridge strain, displacement, and vibration data in various manners</li>
+              <li>Utilizes linear regressions and satistical tools to model normal bridge behavior and find abnormalities in behavior</li>
+              <li>No URL avalible to do to confidentiality reasons</li>
+            </ul>
+          </li>
+          <li>Smart Home System
+            <ul>
+              <li>Built using C & C#</li>
+              <li>Utilize multiple sensors to trigger dynamic reactions via a buzzer and LEDs</li>
+            </ul>
+          </li>
+        </ol>
 
-</body>
+    <h2 style='text-align: center'> Useful Scripts & Applications </h2>
+    <ol>
+      <li>Bash Startup</li>
+      <pre>
+        #!/bin/bash
+
+        # Adding some variables
+        user=$(whoami)
+        system=$(uname)
+        kernel=$(uname -r)
+        uptime=$(uptime -p)
+        host=$(hostname)
+        IP=$(hostname -I | sed 's/ .*//')
+        memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+        memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+        check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
+
+        # Functions list
+
+        get_privilege(){
+        if [[ $user = $check ]];
+        then
+                echo "Root Access:| True:|" >> trash.txt
+        else
+                echo "Root Access:| False:|" >> trash.txt
+        fi
+        }
+
+        get_user(){
+        	echo "User:|" $user"@"$system":|" >> trash.txt
+        }
+
+        get_hostname(){
+        	echo "Host:|" $host":|"  >> trash.txt
+        }
+
+        get_shell(){
+        	echo "Shell:|" $SHELL":|"  >> trash.txt
+        }
+
+        get_ip(){
+          echo "IP:|" $IP":|" >> trash.txt
+        }
+
+        get_kernel(){
+        	echo "Kernel:|" $kernel":|"  >> trash.txt
+        }
+
+        get_uptime(){
+        	echo "Uptime:|" $uptime":|"  >> trash.txt
+        }
+
+
+        get_memory(){
+        	echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
+        }
+
+        get_packages(){
+        	echo "Packages:| "$packages":|"  >> trash.txt
+        }
+
+        # Run all the functions in this order
+
+        get_user
+        get_hostname
+        get_ip
+        get_privilege
+        get_shell
+        get_kernel
+        get_uptime
+        get_memory
+
+        # Display it
+        cat trash.txt | column -s":" -t
+
+        rm trash.txt
+      </pre>
+    </ol>
+      </body>
