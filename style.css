@@ -1,0 +1,17 @@
+/* Style the header */
+.header {
+  background-color: #0f0063;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.header a:hover {
+  color: green;
+  text-decoration: inherit;
+}
