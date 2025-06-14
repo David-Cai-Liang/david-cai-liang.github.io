@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--<html> to <html lang='en'> -->
-<html lang='en'>
+<html lang='en' data-theme="light">
 
   <head>
     <meta charset="utf-8">
@@ -22,13 +22,13 @@
     <div class="topnav">
       <a href="index.html">Projects</a>
       <a href="script.html">Scripts</a>
-      <button id="theme-toggle" style="float: right;">Toggle Dark Mode</button>
+      <button id="theme-toggle" style="float: right;" aria-label="Toggle Dark Mode" >🌙</button>
     </div>
 
         <h2 style='text-align: center'> Useful Scripts & Applications </h2>
         <ol>
           <li>Bash Startup</li>
-          <pre>
+          <pre><code class="language-bash">
             #!/bin/bash
 
             # Adding some variables
@@ -101,7 +101,7 @@
             cat trash.txt | column -s":" -t
 
             rm trash.txt
-          </pre>
+          </code></pre>
         </ol>
 
         <div class="contact-info">
@@ -113,5 +113,5 @@
           </ul>
         </div>
         <script src="app.js"></script>
-        
+
       </body>
