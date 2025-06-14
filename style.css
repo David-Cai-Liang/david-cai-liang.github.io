@@ -2,7 +2,7 @@
 .header {
   background-image: url("2025-05-20-02-57-26_UMBRA-09_GEC.png");
   color: white;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -23,4 +23,39 @@
   padding: 1em;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* The navbar container */
+.topnav {
+  display: flexbox;
+  /*Change from flex*/
+  justify-content: center;
+  overflow: visible;
+  /*Note flex overrides this.*/
+  background-color: #2e1b19;
+  /* new color */
+  padding: 14px 16px;
+  /*Needed for flex box to behave*/
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Navbar links */
+.topnav a {
+  float: center;
+  color: white;
+  text-align: left;
+  padding: 6px 7px;
+  /*Less padding, better on small screens*/
+  text-decoration: none;
+  position: relative;
+  margin: 0 10px;
+  white-space: nowrap;
+  /*Absolutely necessary on small screen.*/
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
 }
