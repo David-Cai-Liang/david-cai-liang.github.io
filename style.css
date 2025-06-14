@@ -116,19 +116,3 @@ body {
 .contact-links:visited {
   color: var(--visited-color);
 }
-
-#theme-toggle svg {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;  /* inherits color */
-  transition: stroke 0.3s ease;
-}
-
-/* Change color on hover or based on theme */
-[data-theme="light"] #theme-toggle {
-  color: #FFA500; /* warm sun color */
-}
-
-[data-theme="dark"] #theme-toggle {
-  color: #FFD700; /* brighter gold */
-}

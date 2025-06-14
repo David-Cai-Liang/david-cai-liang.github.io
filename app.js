@@ -11,7 +11,7 @@ const htmlElement = document.documentElement;
 function setTheme(theme) {
     htmlElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    themeToggle.innerHTML = theme === 'light' ? "🌙" : "☀️";
+    themeToggle.innerHTML = theme === 'light' ? "Toggle Dark Mode" : "Toggle Light Mode";
 }
 
 themeToggle.addEventListener('click', () => {
