@@ -7,11 +7,24 @@ function openEmail() {
 
 const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.documentElement;
+const prismLight = document.getElementById("prism-light-theme");
+const prismDark = document.getElementById("prism-dark-theme");
 
 function setTheme(theme) {
     htmlElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    themeToggle.innerHTML = theme === 'light' ? "🌙" : "☀️";
+    //
+    if (theme === 'light') {
+      prismLight.removeAttribute("disabled");
+      prismDark.setAttribute("disabled", true);
+      themeToggle.textContent = "🌙";
+    } else {
+      prismLight.setAttribute("disabled", true);
+      prismDark.removeAttribute("disabled");
+      themeToggle.textContent = "☀️";
+    }
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    //
 }
 
 themeToggle.addEventListener('click', () => {
