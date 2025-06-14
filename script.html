@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--<html> to <html lang='en'> -->
+<html lang='en'>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projects </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1> <a href=https://sites.google.com/view/davidcailianghighschool/computer-science target="_blank" rel="noopener"> David Cai Liang Portfolio </a></h1>
+    </div>
+    <!--Update topnav on main-->
+    <div class="topnav">
+      <a href="index.html">Projects</a>
+      <a href="script.html">Scripts</a>
+    </div>
+
+        <h2 style='text-align: center'> Useful Scripts & Applications </h2>
+        <ol>
+          <li>Bash Startup</li>
+          <pre>
+            #!/bin/bash
+
+            # Adding some variables
+            user=$(whoami)
+            system=$(uname)
+            kernel=$(uname -r)
+            uptime=$(uptime -p)
+            host=$(hostname)
+            IP=$(hostname -I | sed 's/ .*//')
+            memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+            memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+            check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
+
+            # Functions list
+
+            get_privilege(){
+            if [[ $user = $check ]];
+            then
+            echo "Root Access:| True:|" >> trash.txt
+            else
+            echo "Root Access:| False:|" >> trash.txt
+            fi
+            }
+
+            get_user(){
+            echo "User:|" $user"@"$system":|" >> trash.txt
+            }
+
+            get_hostname(){
+            echo "Host:|" $host":|"  >> trash.txt
+            }
+
+            get_shell(){
+            echo "Shell:|" $SHELL":|"  >> trash.txt
+            }
+
+            get_ip(){
+            echo "IP:|" $IP":|" >> trash.txt
+            }
+
+            get_kernel(){
+            echo "Kernel:|" $kernel":|"  >> trash.txt
+            }
+
+            get_uptime(){
+            echo "Uptime:|" $uptime":|"  >> trash.txt
+            }
+
+
+            get_memory(){
+            echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
+            }
+
+            get_packages(){
+            echo "Packages:| "$packages":|"  >> trash.txt
+            }
+
+            # Run all the functions in this order
+
+            get_user
+            get_hostname
+            get_ip
+            get_privilege
+            get_shell
+            get_kernel
+            get_uptime
+            get_memory
+
+            # Display it
+            cat trash.txt | column -s":" -t
+
+            rm trash.txt
+          </pre>
+        </ol>
+
+        <div class="contact-info">
+          <h2 >Contact Information</h2>
+          <p>Feel free to reach out to us via email:</p>
+          <ul>
+            <li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/david-cai-liang-69783926b"> https://www.linkedin.com/in/david-cai-liang-69783926b/</a></li>
+            <li><strong>Email: </strong><a href="javascript:openEmail()">davidcailiang9@gmail.com</a> </li>
+          </ul>
+        </div>
+        <script src="contact.js"></script>
+      </body>

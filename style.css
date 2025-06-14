@@ -1,9 +1,10 @@
 /* Style the header */
 .header {
-  background-image: url("2025-05-20-02-57-26_UMBRA-09_GEC.png");
+  background-image: url("header.png");
   color: white;
   padding: 20px;
   text-align: center;
+  background-size: cover
 }
 
 .header a {
