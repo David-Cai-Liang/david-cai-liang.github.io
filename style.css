@@ -130,7 +130,7 @@ pre {
 }
 
 /* Style the button that is used to open and close the collapsible content */
-.collapsible-header {
+.collapsibleHeader {
  background-color: beige;
  color: black;
  cursor: pointer;
