@@ -130,6 +130,19 @@ pre {
 }
 
 /* Style the button that is used to open and close the collapsible content */
+.collapsible-header {
+ background-color: beige;
+ color: black;
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+ font-size: 15px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
 .collapsible {
  background-color: var(--contrast-background);
  color: var(--text-color);
@@ -140,7 +153,6 @@ pre {
  text-align: left;
  outline: none;
  font-size: 15px;
- border
 }
 
 /* Style the collapsible content. Note: hidden by default */
