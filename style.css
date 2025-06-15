@@ -117,14 +117,15 @@ body {
   color: var(--visited-color);
 }
 
-pre {
+pre, .text-holder {
   overflow-x: auto;
   background-color: #f4f4f4;
   padding: 1em;
+  margin: 1em;
   border-radius: 6px;
 }
 
-[data-theme='dark'] pre {
+[data-theme='dark'] pre, [data-theme='dark'] .text-holder {
   background-color: #1e1e1e;
   color: #d4d4d4;
 }
