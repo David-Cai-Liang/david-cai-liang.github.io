@@ -1,5 +1,5 @@
 /* Style the header */
-.header {
+header {
   background-image: url("header.png");
   background-size: cover;        /* Ensure the image covers the full container */
   background-position: center;   /* Center the image nicely */
@@ -9,12 +9,12 @@
   font-size: 50px;
 }
 
-.header a {
+header a {
   color: inherit;
   text-decoration: inherit;
 }
 
-.header a:hover {
+header a:hover {
   color: green;
   text-decoration: inherit;
 }
@@ -28,7 +28,7 @@
 }
 
 /* The navbar container */
-.topnav {
+nav {
   /*Change from flex*/
   justify-content: center;
   overflow: visible;
@@ -42,7 +42,7 @@
 }
 
 /* Navbar links */
-.topnav a {
+nav a {
   float: center;
   color: white;
   text-align: left;
@@ -56,7 +56,7 @@
 }
 
 /* Links - change color on hover */
-.topnav a:hover {
+nav a:hover {
   background-color: white;
   color: black;
 }
