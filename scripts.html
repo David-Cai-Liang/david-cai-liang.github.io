@@ -106,11 +106,19 @@ rm trash.txt</code></pre>
   <br>
   <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Backup Script (Batch-Windows)</button>
   <div class="content">
-    <pre><code class="language-bash">set YEAR=%DATE:~10,4%
+    <pre><code class="language-bash">set YEAR=%DATE:~10,4% <!--Position 10, Take Next 4 Char-->
 set MONTH=%DATE:~4,2%
 set DAY=%DATE:~7,2%
 set DIRNAME=backup_%YEAR%_%MONTH%_%DAY%
-scp -r pi@HOSTNAME:/home/pi/Desktop/ENGR010/ backupPI/%DIRNAME%</code></pre>
+set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
+scp -r pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/ backupPI/%DIRNAME%</code></pre>
+  </div>
+  <br>
+  <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Transfer Script (Batch-Windows)</button>
+  <div class="content">
+    <pre><code class="language-bash">set DIRNAME=%*
+set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
+scp -r %DIRNAME% pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/%DIRNAME%</code></pre>
   </div>
   <div class="contact-info">
     <h2 >Contact Information</h2>
