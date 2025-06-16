@@ -156,10 +156,11 @@ pre, .text-holder {
  font-size: 15px;
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
- padding: 0 18px;
- display: none;
- overflow: hidden;
- background-color: var(--visited-color);
+    max-height: 0; /* Starts collapsed */
+    overflow: hidden; /* Hides content when collapsed */
+    transition: max-height 0.3s ease-out; /* Smooth transition for expand/collapse */
+    /* Add other styling for your content text, padding, etc. */
+    padding: 0 18px; /* Example padding */
+    background-color: var(--visited-color);
 }
