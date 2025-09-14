@@ -17,7 +17,7 @@
 <body>
 
   <header>
-    <a href=https://sites.google.com/view/davidcailianghighschool/computer-science target="_blank" rel="noopener"> David Cai Liang Portfolio </a>
+    <a> David Cai Liang Portfolio </a>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -32,104 +32,104 @@
   <button type="button" class="collapsible" style="text-align: center">Bash Startup Script</button>
   <div class="content">
     <pre><code class="language-bash">#!/bin/bash
-# Adding some variables
-user=$(whoami)
-system=$(uname)
-kernel=$(uname -r)
-uptime=$(uptime -p)
-host=$(hostname)
-IP=$(hostname -I | sed 's/ .*//')
-memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
-memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
-check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
+      # Adding some variables
+      user=$(whoami)
+      system=$(uname)
+      kernel=$(uname -r)
+      uptime=$(uptime -p)
+      host=$(hostname)
+      IP=$(hostname -I | sed 's/ .*//')
+      memavail=$(cat /proc/meminfo | grep "MemAvailable" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+      memfree=$(cat /proc/meminfo | grep "MemFree" | sed 's/[^*,:]*://g' | sed 's/^ *//g')
+      check=$(cat /etc/group | grep wheel | cut -d ":" -f 4)
 
-# Functions list
+      # Functions list
 
-get_privilege(){
-  if [[ $user = $check ]];
-  then
-  echo "Root Access:| True:|" >> trash.txt
-  else
-  echo "Root Access:| False:|" >> trash.txt
-  fi
-}
+      get_privilege(){
+        if [[ $user = $check ]];
+        then
+        echo "Root Access:| True:|" >> trash.txt
+        else
+        echo "Root Access:| False:|" >> trash.txt
+        fi
+      }
 
-get_user(){
-  echo "User:|" $user"@"$system":|" >> trash.txt
-}
+      get_user(){
+        echo "User:|" $user"@"$system":|" >> trash.txt
+      }
 
-get_hostname(){
-  echo "Host:|" $host":|"  >> trash.txt
-}
+      get_hostname(){
+        echo "Host:|" $host":|"  >> trash.txt
+      }
 
-get_shell(){
-  echo "Shell:|" $SHELL":|"  >> trash.txt
-}
+      get_shell(){
+        echo "Shell:|" $SHELL":|"  >> trash.txt
+      }
 
-get_ip(){
-  echo "IP:|" $IP":|" >> trash.txt
-}
+      get_ip(){
+        echo "IP:|" $IP":|" >> trash.txt
+      }
 
-get_kernel(){
-  echo "Kernel:|" $kernel":|"  >> trash.txt
-}
+      get_kernel(){
+        echo "Kernel:|" $kernel":|"  >> trash.txt
+      }
 
-get_uptime(){
-  echo "Uptime:|" $uptime":|"  >> trash.txt
-}
+      get_uptime(){
+        echo "Uptime:|" $uptime":|"  >> trash.txt
+      }
 
 
-get_memory(){
-  echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
-}
+      get_memory(){
+        echo "Memory:|" $memfree"/"$memavail":|"  >> trash.txt
+      }
 
-get_packages(){
-  echo "Packages:| "$packages":|"  >> trash.txt
-}
+      get_packages(){
+        echo "Packages:| "$packages":|"  >> trash.txt
+      }
 
-# Run all the functions in this order
+      # Run all the functions in this order
 
-get_user
-get_hostname
-get_ip
-get_privilege
-get_shell
-get_kernel
-get_uptime
-get_memory
+      get_user
+      get_hostname
+      get_ip
+      get_privilege
+      get_shell
+      get_kernel
+      get_uptime
+      get_memory
 
-# Display it
-cat trash.txt | column -s":" -t
+      # Display it
+      cat trash.txt | column -s":" -t
 
-rm trash.txt</code></pre>
-  </div>
-  <br>
-  <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Backup Script (Batch-Windows)</button>
-  <div class="content">
-    <pre><code class="language-bash">set YEAR=%DATE:~10,4% <!--Position 10, Take Next 4 Char-->
-set MONTH=%DATE:~4,2%
-set DAY=%DATE:~7,2%
-set DIRNAME=backup_%YEAR%_%MONTH%_%DAY%
-set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
-scp -r pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/ backupPI/%DIRNAME%</code></pre>
-  </div>
-  <br>
-  <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Transfer Script (Batch-Windows)</button>
-  <div class="content">
-    <pre><code class="language-bash">set DIRNAME=%*
-set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
-scp -r %DIRNAME% pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/%DIRNAME%</code></pre>
-  </div>
-  <div class="contact-info">
-    <h2 >Contact Information</h2>
-    <p>Feel free to reach out to us via email:</p>
-    <ul>
-      <li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/david-cai-liang-69783926b" class="contrast-links""> https://www.linkedin.com/in/david-cai-liang-69783926b/</a></li>
-      <li><strong>Email: </strong><a href="javascript:openEmail()" class="contrast-links">davidcailiang9@gmail.com</a> </li>
-    </ul>
-  </div>
-  <script src="app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-</body>
-</html>
+      rm trash.txt</code></pre>
+    </div>
+    <br>
+    <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Backup Script (Batch-Windows)</button>
+    <div class="content">
+      <pre><code class="language-bash">set YEAR=%DATE:~10,4% <!--Position 10, Take Next 4 Char-->
+        set MONTH=%DATE:~4,2%
+        set DAY=%DATE:~7,2%
+        set DIRNAME=backup_%YEAR%_%MONTH%_%DAY%
+        set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
+        scp -r pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/ backupPI/%DIRNAME%</code></pre>
+      </div>
+      <br>
+      <button type="button" class="collapsible" style="text-align: center">Rasberry Pi Transfer Script (Batch-Windows)</button>
+      <div class="content">
+        <pre><code class="language-bash">set DIRNAME=%*
+          set HOSTNAME={HOSTNAME} /Replace {HOSTNAME} with actual hostname.
+          scp -r %DIRNAME% pi@%HOSTNAME%:/home/pi/Desktop/ENGR010/%DIRNAME%</code></pre>
+        </div>
+        <div class="contact-info">
+          <h2 >Contact Information</h2>
+          <p>Feel free to reach out to us via email:</p>
+          <ul>
+            <li><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/david-cai-liang-69783926b" class="contrast-links""> https://www.linkedin.com/in/david-cai-liang-69783926b/</a></li>
+            <li><strong>Email: </strong><a href="javascript:openEmail()" class="contrast-links">davidcailiang9@gmail.com</a> </li>
+          </ul>
+        </div>
+        <script src="app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+      </body>
+      </html>
