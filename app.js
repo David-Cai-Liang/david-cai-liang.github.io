@@ -88,7 +88,11 @@ for (let i = 0; i < coll.length; i++) {
             let buttonId = '';
             if (sectionId === 'section-internships') {
                 buttonId = 'toggleAllInternships';
-            } else if (sectionId === 'section-activities') {
+            }
+            else if (sectionId === 'section-campus') {
+                buttonId = 'toggleAllCampus';
+            }
+            else if (sectionId === 'section-activities') {
                 buttonId = 'toggleAllActivities';
             }
             if (buttonId) {
@@ -142,6 +146,11 @@ document.getElementById('toggleAllInternships').addEventListener('click', functi
     toggleAllInSection('section-internships', 'toggleAllInternships');
 });
 
+// Event listener for "OPEN ALL CAMPUS ACTIVITIES" button
+document.getElementById('toggleAllCampus').addEventListener('click', function() {
+    toggleAllInSection('section-campus', 'toggleAllCampus');
+});
+
 // Event listener for "OPEN ALL ADDITIONAL ACTIVITIES" button
 document.getElementById('toggleAllActivities').addEventListener('click', function() {
     toggleAllInSection('section-activities', 'toggleAllActivities');
@@ -155,5 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         updateToggleAllButtonText('section-internships', 'toggleAllInternships');
         updateToggleAllButtonText('section-activities', 'toggleAllActivities');
+        updateToggleAllButtonText('section-campus', 'toggleAllCampus');
     }, 100); // A small delay might be necessary depending on content loading
 });
